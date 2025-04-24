@@ -53,6 +53,7 @@ The analysis followed these steps:
 <div align="center">
   <img src="assets/quickdb_schema.png" alt="Menu Banner">
 </div>
+
 *   **SQL Code Generation**: Exporting the SQL code (MySQL syntax in this case) from QuickDBD to create the database schema.
 *   **Database Creation**: Creating a new database (Pizza DB) in a MySQL instance using Navicat.
 *   **Table Creation**: Executing the generated SQL code to create the tables in the database.
