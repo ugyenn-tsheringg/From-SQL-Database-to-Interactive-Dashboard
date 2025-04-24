@@ -182,12 +182,13 @@ FROM
     * Staff presence per shift/day (requires shift data)  
 
 ![Staff Dashboard](assets/staff_dashboard.png)
-   
-*   **Calculated Fields in Data Studio**: Creating new metrics within Data Studio by performing calculations on existing fields (e.g., total sales, average order value, full address).
-*   **Chart Configuration**: Customizing charts by selecting dimensions and metrics, adjusting aggregations (e.g., count distinct, sum), and setting sorting options.
-*   **Conditional Formatting**: Applying rules to visually highlight data based on specific criteria (e.g., low stock levels).
-*   **Dashboard Design**: Focusing on clear and effective data presentation rather than purely aesthetic elements. Organizing and resizing widgets for better readability. Adding report-level elements like a header and date range control for consistency across pages. Minimizing unnecessary titles and using axis titles where needed.
-*   **Theme Application**: Applying a theme extracted from the restaurant's menu for branding.
+
+
+*   **Calculated Fields in Data Studio**: Creating new metrics within Data Studio by performing calculations on existing fields (e.g., total sales, average order value, full address).  
+*   **Chart Configuration**: Customizing charts by selecting dimensions and metrics, adjusting aggregations (e.g., count distinct, sum), and setting sorting options.  
+*   **Conditional Formatting**: Applying rules to visually highlight data based on specific criteria (e.g., low stock levels).  
+*   **Dashboard Design**: Focusing on clear and effective data presentation rather than purely aesthetic elements. Organizing and resizing widgets for better readability. Adding report-level elements like a header and date range control for consistency across pages. Minimizing unnecessary titles and using axis titles where needed.  
+*   **Theme Application**: Applying a theme extracted from the restaurant's menu for branding.  
 
 ## Recommendations
 
