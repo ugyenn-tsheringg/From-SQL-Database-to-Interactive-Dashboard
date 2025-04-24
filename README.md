@@ -3,6 +3,149 @@
 ![Ben's Pizzeria Dashboard](https://miro.medium.com/v2/resize:fit:720/format:webp/1*8c4q2bQ5Y5Q5Y5Q5Y5Q5Y5Q.png)
 
 
+# Ben's Pizzeria Sales Analysis
+
+![Pizza Banner](https://via.placeholder.com/800x200.png?text=Ben's+Pizzeria+Analysis)
+## Overview
+
+This project presents a comprehensive analysis of sales data from Ben's Pizzeria, a fictional pizza restaurant. The primary goal is to uncover sales patterns, identify popular products, understand customer behavior based on time and day, and provide actionable recommendations for business improvement through targeted dashboards.
+
+This analysis replicates and potentially expands upon the case study presented by Abdulaziz Babkr in his Medium article:
+[Analyzing Ben’s Pizzeria: A Data Analysis Case Study](https://medium.com/@abdulazizbabkrwork/analyzing-bens-pizzeria-a-data-analysis-case-study-e118987beb8f)
+
+## Problem Statement & Objectives
+
+The key business questions this analysis aims to answer are:
+
+1.  What are the busiest days and times for the pizzeria?
+2.  How many pizzas are typically included in an order?
+3.  Which pizzas are the most and least popular?
+4.  Which pizzas generate the most revenue?
+5.  Which pizza sizes are most commonly ordered?
+6.  What is the distribution of orders throughout the year?
+7.  How can inventory be effectively managed based on usage and cost? [cite: 3, 4]
+8.  How can staff scheduling and costs be monitored? [cite: 6]
+9.  What actionable insights can be derived to optimize operations, marketing, inventory, and staffing?
+
+## Dataset
+
+The analysis utilizes a relational dataset potentially comprising tables for:
+
+* **Orders:** Contains records of each order placed (`order_id`, `date`, `time`, potentially `address`, `delivery/pickup status`).
+* **Order Details:** Provides details for each item within an order (`order_details_id`, `order_id`, `pizza_id`, `quantity`).
+* **Pizzas:** Contains information about each unique pizza (`pizza_id`, `pizza_type_id`, `size`, `price`).
+* **Pizza Types:** Describes categories and ingredients (`pizza_type_id`, `name`, `category`, `ingredients`).
+* **Ingredients:** Contains details about individual ingredients (`ingredient_id`, `name`, `cost`, `stock_quantity`).
+* **Staff/Shifts:** Contains information about staff schedules and costs (`staff_id`, `name`, `shift_details`, `hourly_rate`).
+
+*(Optional: Add a link here if the dataset is publicly available or included in your repository)*
+* [Link to dataset or data source description]
+
+## Tools & Technologies
+
+* **Database:** SQL (e.g., MySQL, PostgreSQL, SQLite) - Used for data querying, aggregation, and analysis.
+* **Data Visualization:** [Specify your tool, e.g., Tableau, Power BI, Python (Matplotlib/Seaborn/Plotly)] - Used to create the dashboards and visual representations of the findings.
+* **[Optional: Add other tools like Python (Pandas for data manipulation), Jupyter Notebooks, etc., if used]**
+
+## Methodology
+
+The analysis followed these steps:
+
+1.  **Data Understanding:** Exploring the database schema and understanding the relationships between tables.
+2.  **Data Preparation/Cleaning:** [Mention any cleaning steps if you performed them, e.g., checking for nulls, data type conversions, calculating ingredient usage per pizza].
+3.  **Exploratory Data Analysis (EDA) using SQL:** Performing calculations required for the dashboards (e.g., total sales, ingredient usage, staff hours).
+4.  **Dashboard Development:** Creating three specific dashboards to address key business areas: Order Activity, Inventory Management, and Staff Control.
+5.  **Insight Generation & Recommendations:** Synthesizing the findings from the dashboards to derive actionable insights.
+
+## Dashboards Created
+
+Three dashboards were developed to provide focused insights:
+
+### 1. Order Activity Dashboard [cite: 1]
+
+* **Objective:** Monitor core sales and order patterns.
+* **Key Metrics & Visualizations:**
+    * Total orders [cite: 1]
+    * Total sales [cite: 1]
+    * Total items sold [cite: 1]
+    * Average order value [cite: 1]
+    * Sales breakdown by pizza category [cite: 1]
+    * Top selling items (pizzas) [cite: 1]
+    * Order volume by hour [cite: 1]
+    * Sales revenue by hour [cite: 1]
+    * Orders by customer address (if available) [cite: 1]
+    * Order fulfillment method (Delivery vs. Pick up) [cite: 1]
+
+### 2. Inventory Management Dashboard [cite: 2]
+
+* **Objective:** Track ingredient usage, costs, and stock levels to optimize inventory and understand pizza profitability[cite: 3, 4].
+* **Key Metrics & Visualizations:**
+    * Total quantity consumed per ingredient [cite: 5]
+    * Total cost of ingredients used [cite: 5]
+    * Calculated cost per pizza based on ingredients [cite: 5]
+    * Percentage of stock remaining per ingredient (requires initial stock data) [cite: 5]
+    * Alerts or indicators for ingredients needing reordering [cite: 3]
+
+### 3. Staff Control Dashboard [cite: 6]
+
+* **Objective:** Monitor staff hours and costs[cite: 6].
+* **Key Metrics & Visualizations:**
+    * Total overall staff costs [cite: 7]
+    * Total hours worked across all staff [cite: 7]
+    * Hours worked breakdown by staff member [cite: 7]
+    * Cost breakdown per staff member [cite: 7]
+    * Staff presence per shift/day (requires shift data) [cite: 6]
+
+## Key Findings
+
+*(Update this section based on insights derived *specifically* from your dashboards)*
+
+* **Peak Hours & Days:** The Order Activity dashboard confirms peak times are [Your Findings, e.g., 12-1 PM, 5-7 PM] and busiest days are [Your Findings, e.g., Fridays, Saturdays].
+* **Popular Items:** [Your Findings, e.g., The Classic Deluxe and Barbecue Chicken pizzas are top sellers by quantity and revenue].
+* **Inventory Insights:** [Your Findings from Inventory Dashboard, e.g., Tomato Sauce and Mozzarella Cheese have the highest consumption rate. Ingredient X is below reorder level. The calculated cost for Pizza Y is $Z.ZZ].
+* **Staffing Insights:** [Your Findings from Staff Dashboard, e.g., Staff member A worked the most hours. Total staff cost for the period was $X,XXX].
+* [Add other significant findings derived from your dashboards].
+
+## Visualizations
+
+*(Link to your specific dashboards or embed screenshots if possible)*
+
+* [Link to Order Activity Dashboard]
+* [Link to Inventory Management Dashboard]
+* [Link to Staff Control Dashboard]
+
+Example placeholder:
+`![Order Activity Dashboard Screenshot](visualizations/dashboard_orders.png)`
+
+## Recommendations
+
+Based on the analysis and dashboard insights:
+
+1.  **Optimize Staffing:** Use the Staff Control and Order Activity dashboards to align staff schedules precisely with peak hours (e.g., [Your Peak Hours]) and days (e.g., [Your Peak Days])[cite: 1, 6].
+2.  **Inventory Management:**
+    * Proactively reorder ingredients flagged by the Inventory Management dashboard (e.g., [Specific low-stock ingredients])[cite: 3, 5].
+    * Analyze the profitability of pizzas using the calculated cost data; consider price adjustments or promotions for high-cost/low-margin items[cite: 4, 5].
+    * Ensure sufficient stock for ingredients used in top-selling items identified in the Order Activity dashboard[cite: 1, 5].
+3.  **Marketing & Promotions:**
+    * Target promotions during off-peak hours identified by the Order Activity dashboard[cite: 1].
+    * Feature top-selling items prominently in marketing materials[cite: 1].
+    * Analyze sales by delivery/pickup to optimize delivery zones or pickup processes[cite: 1].
+4.  **Menu Strategy:** Use inventory and sales data to inform decisions about removing unpopular items or introducing new ones based on ingredient availability and cost[cite: 1, 4, 5].
+
+## How to Use / Run the Analysis
+
+1.  **Prerequisites:**
+    * A working SQL database system (e.g., MySQL, PostgreSQL, SQLite).
+    * [Specify visualization software/platform, e.g., Tableau Desktop/Server, Power BI Service, Python environment].
+2.  **Setup:**
+    * Clone the repository: `git clone [Your Repository URL]`
+    * Load the dataset: Import the provided `.csv` files or execute the `.sql` database dump file (`[your_dump_file.sql]`) into your chosen SQL database. Ensure tables for ingredients and staff/shifts are included if necessary for dashboards 2 & 3.
+3.  **Run Analysis/View Dashboards:**
+    * Execute any necessary SQL preprocessing scripts located in the `[sql_scripts/]` directory.
+    * Open the dashboard files located in `[dashboards/]` or access them via their online links.
+4.  **Interact:** Filter and explore the dashboards to gain specific insights.
+
+## File Structure
 When it comes to running a successful restaurant, it’s not just about serving great food. Behind every pizza sold lies a story of ingredients, staffing schedules, customer behavior, and cost management. To explore these hidden layers, I created a fictional dataset (csv) using Python, inspired by a real-world location—Pizza Hut in Alor Setar, Malaysia. I used it as a case study to uncover valuable insights that could drive smarter decisions and improve overall restaurant operations.
 
 
@@ -27,8 +170,6 @@ Sales by hour and location
 It even visualizes deliveries vs. pick-ups, giving a geographic flavor to customer habits.
 
 ```bash:
--- Query for Dashboard 1
--- Extracting data related to orders, items, and addresses
 SELECT
     o.order_id,
     i.item_price,
@@ -55,6 +196,29 @@ Here’s where we zoom in on the kitchen. I looked into how much of each ingredi
 
 With these insights, you can figure out which ingredients are flying off the shelves and which ones are just sitting in storage, eating into your margins.
 
+
+```bash:
+SELECT
+    s2.ing_name,
+    s2.ordered_weight,
+    CAST(ing.ing_weight AS BIGINT) * CAST(inv.quantity AS BIGINT) AS total_inv_weight,
+    (CAST(ing.ing_weight AS BIGINT) * CAST(inv.quantity AS BIGINT)) - s2.ordered_weight AS remaining_weight
+FROM (
+    SELECT 
+        ing_id,
+        ing_name,
+        SUM(CAST(ordered_weight AS BIGINT)) AS ordered_weight
+    FROM stock1
+    GROUP BY
+        ing_name,
+        ing_id
+) s2
+LEFT JOIN inventory inv
+    ON inv.item_id = s2.ing_id
+LEFT JOIN ingredient ing
+    ON ing.ing_id = s2.ing_id
+```
+
 👨‍🍳 Dashboard 3: Staff and Scheduling
 Running a restaurant smoothly also means making sure the right number of staff are scheduled—especially during peak hours. This dashboard looks at:
 
@@ -65,6 +229,23 @@ Hourly wages
 Total labor costs
 
 Efficiency in scheduling
+
+```bash:
+SELECT
+    r.date,
+    s.first_name,
+    s.last_name,
+    s.hourly_rate,
+    sh.start_time,
+    sh.end_time,
+    (DATEDIFF(hour, sh.start_time, sh.end_time) + DATEDIFF(minute, sh.start_time, sh.end_time)) / 60 AS hours_in_shift,
+    ((DATEDIFF(hour, sh.start_time, sh.end_time) + DATEDIFF(minute, sh.start_time, sh.end_time)) / 60) * s.hourly_rate AS staff_cost
+FROM rota r
+LEFT JOIN staff s
+    ON r.staff_id = s.staff_id
+LEFT JOIN shift sh
+    ON r.shift_id = sh.shift_id
+```
 
 These details help managers decide if they’re overstaffing during slow periods or need more hands during rush hours.
 
