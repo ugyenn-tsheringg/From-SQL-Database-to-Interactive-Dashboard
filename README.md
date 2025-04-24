@@ -1,6 +1,8 @@
 # Alor Setar Pizza Hut - From SQL Database to Interactive Dashboard
 
-![Menu Banner](assets/menu_page.png)
+<div align="center">
+  <img src="assets/menu_page.png" width="90%" height="auto" alt="Menu Banner">
+</div>
 
 ## Overview
 When it comes to running a successful restaurant, it’s not just about serving great food. Behind every pizza sold lies a story of ingredients, staffing schedules, customer behavior, and cost management. To explore these hidden layers, I created a fictional dataset (csv) using **Python's Faker** library, inspired by a real-world location—**Pizza Hut in Alor Setar**, Malaysia. The primary goal is to uncover sales patterns, identify popular products, understand customer behavior based on time and day, and provide actionable recommendations for business improvement through targeted dashboards.
