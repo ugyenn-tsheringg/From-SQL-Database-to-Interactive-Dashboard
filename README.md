@@ -76,23 +76,21 @@ The analysis followed these steps:
 
 ```bash:
 SELECT
-    o.order_id,
-    i.item_price,
-    o.quantity,
-    i.item_cat,
-    i.item_name,
-    o.created_at,
-    a.delivery_address1,
-    a.delivery_address2,
-    a.delivery_city,
-    a.delivery_zipcode,
-    o.delivery
-FROM 
-    BensPizzeria..orders o
-LEFT JOIN item i
-    ON o.item_id = i.item_id
-LEFT JOIN address a
-    ON o.add_id = a.add_id
+  o.order_id,
+  i.item_price,
+  o.quantity,
+  i.item_cat,
+  i.item_name,
+  o.created_at,
+  a.delivery_address1,
+  a.delivery_address2,
+  a.delivery_city,
+  a.delivery_zipcode,
+  o.delivery
+FROM
+  orders o
+  LEFT JOIN item i ON o.item_id = i.item_id
+  LEFT JOIN address a ON o.address_id = a.address_id
 ```
 
 
@@ -104,44 +102,39 @@ LEFT JOIN address a
     *   Creating a view (`stock_one`) from a custom SQL query for easier manipulation.
 ```bash:
 SELECT
-    s2.ing_name,
-    s2.ordered_weight,
-    CAST(ing.ing_weight AS BIGINT) * CAST(inv.quantity AS BIGINT) AS total_inv_weight,
-    (CAST(ing.ing_weight AS BIGINT) * CAST(inv.quantity AS BIGINT)) - s2.ordered_weight AS remaining_weight
-FROM (
-    SELECT 
-        ing_id,
-        ing_name,
-        SUM(CAST(ordered_weight AS BIGINT)) AS ordered_weight
-    FROM stock1
-    GROUP BY
-        ing_name,
-        ing_id
-) s2
-LEFT JOIN inventory inv
-    ON inv.item_id = s2.ing_id
-LEFT JOIN ingredient ing
-    ON ing.ing_id = s2.ing_id
+  s2.ing_name,
+  s2.ordered_weight,
+  ing.ing_weight*inv.quantity AS total_inv_weight,
+  (ing.ing_weight * inv.quantity) - s2.ordered_weight AS remaining_weight
+FROM
+  (SELECT ing_id, ing_name, sum(ordered_weight) AS ordered_weight FROM stock1 GROUP BY ing_name, ing_id) s2
+  
+left JOIN inventory inv on inv.item_id = s2.ing_id
+LEFT JOIN ingredient ing on ing.ing_id = s2.ing_id
 ```
+
 *   **Staff Dashboard Queries**: Writing queries to calculate:
     *   Staff cost per row (calculating the duration of each shift and multiplying by the hourly rate).
     *   Joining staff, rotor, and shift tables to retrieve relevant information.
     *   Using the `TIMEDIFF` function to calculate the difference between start and end times.
 ```bash:
 SELECT
-    r.date,
-    s.first_name,
-    s.last_name,
-    s.hourly_rate,
-    sh.start_time,
-    sh.end_time,
-    (DATEDIFF(hour, sh.start_time, sh.end_time) + DATEDIFF(minute, sh.start_time, sh.end_time)) / 60 AS hours_in_shift,
-    ((DATEDIFF(hour, sh.start_time, sh.end_time) + DATEDIFF(minute, sh.start_time, sh.end_time)) / 60) * s.hourly_rate AS staff_cost
-FROM rota r
-LEFT JOIN staff s
-    ON r.staff_id = s.staff_id
-LEFT JOIN shift sh
-    ON r.shift_id = sh.shift_id
+  r.DATE,   
+  s.first_name,
+  s.last_name,
+  s.hourly_rate,
+  sh.start_time,
+  sh.end_time,
+  (
+    (HOUR(timediff(sh.end_time, sh.start_time)) * 60) + (MINUTE(timediff(sh.end_time, sh.start_time)))
+  ) / 60 AS hours_in_shift,
+  (
+    (HOUR(timediff(sh.end_time, sh.start_time)) * 60) + (MINUTE(timediff(sh.end_time, sh.start_time)))
+  ) / 60 * s.hourly_rate AS staff_cost
+FROM
+  rota r
+  LEFT JOIN staff s ON r.staff_id = s.staff_id
+  LEFT JOIN shift sh ON r.shift_id = sh.shift_id
 ```
 
 ### 3. Interactive Dashboard Creation
@@ -150,7 +143,7 @@ LEFT JOIN shift sh
 *   **Custom Queries in Data Studio**: Using the "Custom Query" option to directly use the SQL queries written in the previous phase as data sources for the dashboards.
 *   **Data Source Schema Review**: Verifying and adjusting the data types of the fields in Data Studio.
 *   **Dashboard Building**: Creating three separate dashboards:
-*   
+
 ### 1. Order Activity Dashboard
 * **Objective:** Monitor core sales and order patterns.
 * **Key Metrics & Visualizations:**
@@ -164,7 +157,8 @@ LEFT JOIN shift sh
     * Sales revenue by hour   
     * Orders by customer address (if available)  
     * Order fulfillment method (Delivery vs. Pick up)   
-![Order Dashboard]()
+
+![Order Dashboard](assets/order_dashboard.png)
 
 ### 2. Inventory Management Dashboard 
 
@@ -177,7 +171,7 @@ LEFT JOIN shift sh
     * Alerts or indicators for ingredients needing reordering  
 
 
-![Item Dashboard]()
+![Item Dashboard](assets/inventory_dashboard.png)
 
 ### 3. Staff Control Dashboard  
 
@@ -189,7 +183,7 @@ LEFT JOIN shift sh
     * Cost breakdown per staff member   
     * Staff presence per shift/day (requires shift data)  
 
-![Staff Dashboard]()
+![Staff Dashboard](assets/staff_dashboard.png)
 
     *   **Inventory Dashboard**: Displaying ingredient and stock level information using tables, a scorecard (total ingredient cost), and conditional formatting to highlight ingredients needing reorder. Blending data from two different data sources into one table for better efficiency.
   
