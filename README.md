@@ -1,6 +1,12 @@
-# Ben's Pizzeria - Comprehensive Data Analysis Project
+# Alor Setar Pizza Hut - From SQL Database to Interactive Dashboard
 
 ![Ben's Pizzeria Dashboard](https://miro.medium.com/v2/resize:fit:720/format:webp/1*8c4q2bQ5Y5Q5Y5Q5Y5Q5Y5Q.png)
+
+
+
+
+https://lookerstudio.google.com/reporting/350b3b1d-4c5c-407d-8be5-a0b0b58af37f
+
 
 ## 📌 Overview
 
