@@ -144,6 +144,8 @@ FROM
 *   **Data Source Schema Review**: Verifying and adjusting the data types of the fields in Data Studio.
 *   **Dashboard Building**: Creating three separate dashboards:
 
+![For Live Dashboard, Click Here](https://lookerstudio.google.com/reporting/350b3b1d-4c5c-407d-8be5-a0b0b58af37f)
+
 ### 1. Order Activity Dashboard
 * **Objective:** Monitor core sales and order patterns.
 * **Key Metrics & Visualizations:**
@@ -212,16 +214,12 @@ Based on the analysis and dashboard insights:
     * A working SQL database system (e.g., MySQL, PostgreSQL, SQLite).
     * Google's Looker Studio.
 2.  **Setup:**
-    * Clone the repository: `git clone [Your Repository URL]`
-    * Load the dataset: Import the provided `.csv` files or execute the `.sql` database dump file (`dump_file.sql]`) into your chosen SQL database. Ensure tables for ingredients and staff/shifts are included if necessary for dashboards 2 & 3.
+    * Clone the repository: `git clone https://github.com/ugyenn-tsheringg/From-SQL-Database-to-Interactive-Dashboard.git`
+    * Load the dataset: Create SQL instance in Google Cloud, load the (`dump_file.sql`). Connect the instance with Looker Studio.
 3.  **Run Analysis/View Dashboards:**
     * Execute any necessary SQL preprocessing scripts located in the `[sql_scripts/]` directory.
-    * Open the dashboard files located in `[dashboards/]` or access them via their online links.
+    * Load all the tables in Looker .
 4.  **Interact:** Filter and explore the dashboards to gain specific insights.
 
 From Raw Data to Real Impact
 So what did we learn? By using SQL and visualizing the results in Google Looker Studio, I was able to turn rows of data into something restaurant owners and managers can actually use—whether it’s to spot popular items, cut costs, or staff more efficiently.
-
-https://lookerstudio.google.com/reporting/350b3b1d-4c5c-407d-8be5-a0b0b58af37f
-
-
