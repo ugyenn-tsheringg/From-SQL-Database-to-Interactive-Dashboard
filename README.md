@@ -3,9 +3,83 @@
 ![Ben's Pizzeria Dashboard](https://miro.medium.com/v2/resize:fit:720/format:webp/1*8c4q2bQ5Y5Q5Y5Q5Y5Q5Y5Q.png)
 
 
+When it comes to running a successful restaurant, it’s not just about serving great food. Behind every pizza sold lies a story of ingredients, staffing schedules, customer behavior, and cost management. To explore these hidden layers, I created a fictional dataset (csv) using Python, inspired by a real-world location—Pizza Hut in Alor Setar, Malaysia. I used it as a case study to uncover valuable insights that could drive smarter decisions and improve overall restaurant operations.
+
+
+## Sketching Tables and Data Modeling
+Firstly, with **excel**, I made sure all the data are consistent and ready to go. I deleted null rows. Then, I mapped out the data structure using **Quick Database** Diagrams. I had to perform normalization. This gave me a clear picture of how orders, menu items, ingredients, addresses, staffing, and inventory all connect. 
+
+image here!
+
+
+The Dashboards That Told the Tale
+I broke down the analysis into three dashboards. 
+
+## 📦 Dashboard 1: Orders and Sales
+This first dashboard focuses on what’s coming in and what’s going out. It tracks total orders, how much people are spending, what they're ordering most, and even when they’re most likely to order. You’ll see insights like:
+
+Which items are bestsellers
+
+Average order value
+
+Sales by hour and location
+
+It even visualizes deliveries vs. pick-ups, giving a geographic flavor to customer habits.
+
+```bash:
+-- Query for Dashboard 1
+-- Extracting data related to orders, items, and addresses
+SELECT
+    o.order_id,
+    i.item_price,
+    o.quantity,
+    i.item_cat,
+    i.item_name,
+    o.created_at,
+    a.delivery_address1,
+    a.delivery_address2,
+    a.delivery_city,
+    a.delivery_zipcode,
+    o.delivery
+FROM 
+    BensPizzeria..orders o
+LEFT JOIN item i
+    ON o.item_id = i.item_id
+LEFT JOIN address a
+    ON o.add_id = a.add_id
+```
+
+
+🍅 Dashboard 2: Ingredients and Inventory
+Here’s where we zoom in on the kitchen. I looked into how much of each ingredient is being used, what it costs, and how much stock is left. One cool metric was calculating the cost of each pizza based on its ingredients—super useful for pricing strategy and waste reduction.
+
+With these insights, you can figure out which ingredients are flying off the shelves and which ones are just sitting in storage, eating into your margins.
+
+👨‍🍳 Dashboard 3: Staff and Scheduling
+Running a restaurant smoothly also means making sure the right number of staff are scheduled—especially during peak hours. This dashboard looks at:
+
+Staff working hours
+
+Hourly wages
+
+Total labor costs
+
+Efficiency in scheduling
+
+These details help managers decide if they’re overstaffing during slow periods or need more hands during rush hours.
+
+The Engine Behind It All: Smart Data Modeling
+Throughout the project, I put a lot of care into the data model—making sure everything was connected properly and optimized for fast, reliable querying. It’s not the flashiest part of the job, but it’s what makes everything else run smoothly.
+
+From Raw Data to Real Impact
+So what did we learn? By using SQL and visualizing the results in Google Looker Studio, I was able to turn rows of data into something restaurant owners and managers can actually use—whether it’s to spot popular items, cut costs, or staff more efficiently.
+
+Ben’s Pizzeria may be fictional, but the lessons are real. This kind of analysis could help any restaurant become more efficient, more profitable, and more in tune with its customers.
 
 
 https://lookerstudio.google.com/reporting/350b3b1d-4c5c-407d-8be5-a0b0b58af37f
+
+
 
 
 ## 📌 Overview
