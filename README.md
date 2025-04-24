@@ -144,7 +144,7 @@ FROM
 *   **Data Source Schema Review**: Verifying and adjusting the data types of the fields in Data Studio.
 *   **Dashboard Building**: Creating three separate dashboards:
 
-![For Live Dashboard, Click Here](https://lookerstudio.google.com/reporting/350b3b1d-4c5c-407d-8be5-a0b0b58af37f)
+[For Live Dashboard, Click Here](https://lookerstudio.google.com/reporting/350b3b1d-4c5c-407d-8be5-a0b0b58af37f)
 
 ### 1. Order Activity Dashboard
 * **Objective:** Monitor core sales and order patterns.
