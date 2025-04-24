@@ -46,12 +46,13 @@ The analysis followed these steps:
 * ```bash
   from faker import Faker
   ```
-  
 *   **Requirements Gathering**: Identifying the key data points to capture for each area (customer orders, stock, staff) based on the client's brief.
 *   **Table Design**: Specifying the fields and data types for each table, starting with customer orders (item name, price, quantity, customer name, delivery address).
 *   **Normalization**: Reducing data redundancy by creating separate tables for customers, delivery addresses, and products (menu items) and linking them using identifiers (primary and foreign keys).
 *   **Database Diagram**: Using a tool called Quick Database Diagrams (QuickDBD) to visually design the database and define table relationships.
-[link of table from quickdb here]
+<div align="center">
+  <img src="assets/quickdb_schema.png" width="70%" height="auto" alt="Menu Banner">
+</div>
 *   **SQL Code Generation**: Exporting the SQL code (MySQL syntax in this case) from QuickDBD to create the database schema.
 *   **Database Creation**: Creating a new database (Pizza DB) in a MySQL instance using Navicat.
 *   **Table Creation**: Executing the generated SQL code to create the tables in the database.
