@@ -1,7 +1,7 @@
 # Alor Setar Pizza Hut - From SQL Database to Interactive Dashboard
 
 <div align="center">
-  <img src="assets/menu_page.png" width="90%" height="auto" alt="Menu Banner">
+  <img src="assets/menu_page.png" width="50%" height="auto" alt="Menu Banner">
 </div>
 
 ## Overview
