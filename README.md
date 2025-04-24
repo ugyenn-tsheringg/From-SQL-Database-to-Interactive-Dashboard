@@ -93,7 +93,6 @@ FROM
   LEFT JOIN address a ON o.address_id = a.address_id
 ```
 
-
 *   **Inventory Dashboard Queries**: Creating queries to determine:
     *   Total quantity by ingredient (joining orders, item, recipe, and ingredient tables, using aggregation and `GROUP BY`).
     *   Total cost of ingredients (multiplying order quantity by recipe quantity and unit cost, using a subquery to handle aggregated fields).
@@ -170,7 +169,6 @@ FROM
     * Percentage of stock remaining per ingredient (requires initial stock data)   
     * Alerts or indicators for ingredients needing reordering  
 
-
 ![Item Dashboard](assets/inventory_dashboard.png)
 
 ### 3. Staff Control Dashboard  
@@ -184,10 +182,6 @@ FROM
     * Staff presence per shift/day (requires shift data)  
 
 ![Staff Dashboard](assets/staff_dashboard.png)
-
-    *   **Inventory Dashboard**: Displaying ingredient and stock level information using tables, a scorecard (total ingredient cost), and conditional formatting to highlight ingredients needing reorder. Blending data from two different data sources into one table for better efficiency.
-  
-    *   **Staff Dashboard**: Showing staff-related metrics using scorecards (total staff cost, total hours worked) and a table (hours worked and cost per staff member). Applying a date filter to the page to align with the orders data.
    
 *   **Calculated Fields in Data Studio**: Creating new metrics within Data Studio by performing calculations on existing fields (e.g., total sales, average order value, full address).
 *   **Chart Configuration**: Customizing charts by selecting dimensions and metrics, adjusting aggregations (e.g., count distinct, sum), and setting sorting options.
@@ -195,22 +189,15 @@ FROM
 *   **Dashboard Design**: Focusing on clear and effective data presentation rather than purely aesthetic elements. Organizing and resizing widgets for better readability. Adding report-level elements like a header and date range control for consistency across pages. Minimizing unnecessary titles and using axis titles where needed.
 *   **Theme Application**: Applying a theme extracted from the restaurant's menu for branding.
 
-
-
-
-
-
-
-
 ## Recommendations
 
 Based on the analysis and dashboard insights:
 
-1.  **Optimize Staffing:** Use the Staff Control and Order Activity dashboards to align staff schedules precisely with peak hours (e.g., [Your Peak Hours]) and days (e.g., [Your Peak Days])[cite: 1, 6].
+1.  **Optimize Staffing:** Use the Staff Control and Order Activity dashboards to align staff schedules precisely with peak hours
 2.  **Inventory Management:**
-    * Proactively reorder ingredients flagged by the Inventory Management dashboard (e.g., [Specific low-stock ingredients])[cite: 3, 5].
-    * Analyze the profitability of pizzas using the calculated cost data; consider price adjustments or promotions for high-cost/low-margin items[cite: 4, 5].
-    * Ensure sufficient stock for ingredients used in top-selling items identified in the Order Activity dashboard[cite: 1, 5].
+    * Reorder ingredients flagged by the Inventory Management dashboard.
+    * Analyze the profitability of pizzas using the calculated cost data; consider price adjustments or promotions for high-cost/low-margin items
+    * Ensure sufficient stock for ingredients used in top-selling items identified in the Order Activity dashboard
 3.  **Marketing & Promotions:**
     * Target promotions during off-peak hours identified by the Order Activity dashboard.
     * Feature top-selling items prominently in marketing materials.
@@ -224,13 +211,11 @@ Based on the analysis and dashboard insights:
     * Google's Looker Studio.
 2.  **Setup:**
     * Clone the repository: `git clone [Your Repository URL]`
-    * Load the dataset: Import the provided `.csv` files or execute the `.sql` database dump file (`[your_dump_file.sql]`) into your chosen SQL database. Ensure tables for ingredients and staff/shifts are included if necessary for dashboards 2 & 3.
+    * Load the dataset: Import the provided `.csv` files or execute the `.sql` database dump file (`dump_file.sql]`) into your chosen SQL database. Ensure tables for ingredients and staff/shifts are included if necessary for dashboards 2 & 3.
 3.  **Run Analysis/View Dashboards:**
     * Execute any necessary SQL preprocessing scripts located in the `[sql_scripts/]` directory.
     * Open the dashboard files located in `[dashboards/]` or access them via their online links.
 4.  **Interact:** Filter and explore the dashboards to gain specific insights.
-
-
 
 From Raw Data to Real Impact
 So what did we learn? By using SQL and visualizing the results in Google Looker Studio, I was able to turn rows of data into something restaurant owners and managers can actually use—whether it’s to spot popular items, cut costs, or staff more efficiently.
