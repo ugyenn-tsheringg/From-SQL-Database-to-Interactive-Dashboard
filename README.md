@@ -51,7 +51,7 @@ The analysis followed these steps:
 *   **Normalization**: Reducing data redundancy by creating separate tables for customers, delivery addresses, and products (menu items) and linking them using identifiers (primary and foreign keys).
 *   **Database Diagram**: Using a tool called Quick Database Diagrams (QuickDBD) to visually design the database and define table relationships.
 <div align="center">
-  <img src="assets/quickdb_schema.png" width="70%" height="auto" alt="Menu Banner">
+  <img src="assets/quickdb_schema.png" alt="Menu Banner">
 </div>
 *   **SQL Code Generation**: Exporting the SQL code (MySQL syntax in this case) from QuickDBD to create the database schema.
 *   **Database Creation**: Creating a new database (Pizza DB) in a MySQL instance using Navicat.
