@@ -8,18 +8,7 @@
 When it comes to running a successful restaurant, it’s not just about serving great food. Behind every pizza sold lies a story of ingredients, staffing schedules, customer behavior, and cost management. To explore these hidden layers, I created a fictional dataset (CSV) using **Python's Faker library**, inspired by a real-world location—**Pizza Hut in Alor Setar, Malaysia.** This dataset is a modified version of Ben's Pizzeria dataset, tailored to reflect the context of Alor Setar’s Pizza Hut. The primary goal is to uncover sales patterns, identify popular products, understand customer behavior based on time and day, and provide actionable recommendations for business improvement through targeted dashboards.
 
 ## Problem Statement & Objectives
-
-The key business questions this analysis aims to answer are:
-
-1.  What are the busiest days and times for the pizzeria?
-2.  How many pizzas are typically included in an order?
-3.  Which pizzas are the most and least popular?
-4.  Which pizzas generate the most revenue?
-5.  Which pizza sizes are most commonly ordered?
-6.  What is the distribution of orders throughout the year?
-7.  How can inventory be effectively managed based on usage and cost?
-8.  How can staff scheduling and costs be monitored? 
-9.  What actionable insights can be derived to optimize operations, marketing, inventory, and staffing?
+The Alor Setar Pizza Hut Analysis project tackles the challenge of improving restaurant operations by using data to make smarter decisions about sales, inventory, and staffing. The goal is to create three dashboards: the Order Activity Dashboard tracks total sales, popular pizzas, and busy hours to help plan promotions and staff schedules. The Inventory Management Dashboard monitors ingredient usage, costs, and stock levels to ensure timely reordering and reduce waste, making the business more profitable. The Staff Control Dashboard keeps track of staff hours and costs to schedule workers efficiently, cutting unnecessary expenses. By combining these insights, the project aims to help Pizza Hut in Alor Setar, Malaysia, run smoothly and increase revenue.
 
 ## Tools & Technologies
 *   **Quick Database Diagrams (QuickDBD)**: For designing the database schema.
