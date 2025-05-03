@@ -198,19 +198,19 @@ These interactive dashboards deliver actionable insights to drive informed busin
 
 ## Recommendations
 Based on the dashboard insights:
-1. Optimize Staffing: Leverage the Staff Control and Order Activity dashboards to align staff schedules with peak sales hours, reducing overtime costs during quieter periods and ensuring adequate coverage during high-demand times.
+1. **Optimize Staffing:** Leverage the Staff Control and Order Activity dashboards to align staff schedules with peak sales hours, reducing overtime costs during quieter periods and ensuring adequate coverage during high-demand times.
   
-3. Inventory Management:
+3. **Inventory Management:**
 + Reorder ingredients flagged as low by the Inventory Management dashboard’s stock level alerts to avoid shortages.
 + Adjust pricing or promote high-cost, low-margin pizzas based on cost data to improve profitability.
 + Maintain sufficient stock for ingredients used in top-selling items identified in the Order Activity dashboard, minimizing waste by aligning orders with usage patterns.
 
-4. Marketing & Promotions:
+4. **Marketing & Promotions:**
 + Launch promotions during off-peak hours identified by the Order Activity dashboard to drive customer traffic and boost revenue.
 + Highlight top-selling items in marketing campaigns to capitalize on their popularity.
 + Optimize delivery zones and pickup processes by analyzing sales patterns by fulfillment method in the Order Activity dashboard.
 
-5. Menu Strategy: Use inventory and sales data to remove unpopular, low-margin items or introduce new pizzas that utilize cost-effective, high-availability ingredients, enhancing menu profitability.
+5. **Menu Strategy:** Use inventory and sales data to remove unpopular, low-margin items or introduce new pizzas that utilize cost-effective, high-availability ingredients, enhancing menu profitability.
 
 
 ## How to Use / Run the Analysis
@@ -226,5 +226,5 @@ Based on the dashboard insights:
     * Load all the tables in Looker .
 4.  **Interact:** Filter and explore the dashboards to gain specific insights.
 
-From Raw Data to Real Impact
+**From Raw Data to Real Impact**
 So what did we learn? By using SQL and visualizing the results in Google Looker Studio, I was able to turn rows of data into something restaurant owners and managers can actually use—whether it’s to spot popular items, cut costs, or staff more efficiently.
