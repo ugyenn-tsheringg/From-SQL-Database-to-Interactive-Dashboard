@@ -32,7 +32,7 @@ The analysis followed these steps:
 
 ### 1. SQL Database Design and Build
 *   **Scenario**: Generating fictional database for a takeout and delivery pizzeria focusing on customer orders, stock levels, and staff using Python's Faker Library.
-* ```bash
+ ```bash
   from faker import Faker
   ```
 *   **Requirements Gathering**: Identifying the key data points to capture for each area (customer orders, stock, staff) based on the client's brief.
