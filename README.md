@@ -1,4 +1,4 @@
-# Alor Setar Pizza Hut - From SQL Database to Interactive Dashboard
+# Alor Setar Pizza Hut Analysis - From SQL Database to Interactive Dashboard
 
 <div align="center">
   <img src="assets/menu_page.png" width="70%" height="auto" alt="Menu Banner">
