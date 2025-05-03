@@ -5,7 +5,7 @@
 </div>
 
 ## Overview
-When it comes to running a successful restaurant, it’s not just about serving great food. Behind every pizza sold lies a story of ingredients, staffing schedules, customer behavior, and cost management. To explore these hidden layers, I created a fictional dataset (csv) using **Python's Faker** library, inspired by a real-world location—**Pizza Hut in Alor Setar**, Malaysia. The primary goal is to uncover sales patterns, identify popular products, understand customer behavior based on time and day, and provide actionable recommendations for business improvement through targeted dashboards.
+When it comes to running a successful restaurant, it’s not just about serving great food. Behind every pizza sold lies a story of ingredients, staffing schedules, customer behavior, and cost management. To explore these hidden layers, I created a fictional dataset (CSV) using **Python's Faker library**, inspired by a real-world location—**Pizza Hut in Alor Setar, Malaysia.** This dataset is a modified version of Ben's Pizzeria dataset, tailored to reflect the context of Alor Setar’s Pizza Hut. The primary goal is to uncover sales patterns, identify popular products, understand customer behavior based on time and day, and provide actionable recommendations for business improvement through targeted dashboards.
 
 ## Problem Statement & Objectives
 
@@ -193,20 +193,25 @@ FROM
 *   **Dashboard Design**: Focusing on clear and effective data presentation rather than purely aesthetic elements. Organizing and resizing widgets for better readability. Adding report-level elements like a header and date range control for consistency across pages. Minimizing unnecessary titles and using axis titles where needed.  
 *   **Theme Application**: Applying a theme extracted from the restaurant's menu for branding.  
 
+## Results
+These interactive dashboards deliver actionable insights to drive informed business decisions. The **Order Activity Dashboard** reveals peak sales hours and top-selling pizzas, enabling managers to optimize staff schedules for high-demand periods and launch targeted promotions during quieter times to boost customer traffic. For instance, identifying low-sales periods allows for strategic marketing to increase orders. The **Inventory Management Dashboard** monitors ingredient usage, costs, and stock levels, highlighting opportunities to reduce waste, adjust pricing for low-margin items, and ensure adequate stock for popular products, thereby enhancing profitability. The **Staff Control Dashboard** provides a clear breakdown of labor costs and shift efficiencies, supporting precise scheduling to align staff with busy periods, minimizing overtime costs. By integrating these insights, Alor Setar Pizza Hut can streamline operations, improve customer satisfaction, and increase revenue, transforming data into a powerful tool for strategic decision-making.
+
 ## Recommendations
+Based on the dashboard insights:
+1. Optimize Staffing: Leverage the Staff Control and Order Activity dashboards to align staff schedules with peak sales hours, reducing overtime costs during quieter periods and ensuring adequate coverage during high-demand times.
+  
+3. Inventory Management:
++ Reorder ingredients flagged as low by the Inventory Management dashboard’s stock level alerts to avoid shortages.
++ Adjust pricing or promote high-cost, low-margin pizzas based on cost data to improve profitability.
++ Maintain sufficient stock for ingredients used in top-selling items identified in the Order Activity dashboard, minimizing waste by aligning orders with usage patterns.
 
-Based on the analysis and dashboard insights:
+4. Marketing & Promotions:
++ Launch promotions during off-peak hours identified by the Order Activity dashboard to drive customer traffic and boost revenue.
++ Highlight top-selling items in marketing campaigns to capitalize on their popularity.
++ Optimize delivery zones and pickup processes by analyzing sales patterns by fulfillment method in the Order Activity dashboard.
 
-1.  **Optimize Staffing:** Use the Staff Control and Order Activity dashboards to align staff schedules precisely with peak hours
-2.  **Inventory Management:**
-    * Reorder ingredients flagged by the Inventory Management dashboard.
-    * Analyze the profitability of pizzas using the calculated cost data; consider price adjustments or promotions for high-cost/low-margin items
-    * Ensure sufficient stock for ingredients used in top-selling items identified in the Order Activity dashboard
-3.  **Marketing & Promotions:**
-    * Target promotions during off-peak hours identified by the Order Activity dashboard.
-    * Feature top-selling items prominently in marketing materials.
-    * Analyze sales by delivery/pickup to optimize delivery zones or pickup processes.
-4.  **Menu Strategy:** Use inventory and sales data to inform decisions about removing unpopular items or introducing new ones based on ingredient availability and cost.
+5. Menu Strategy: Use inventory and sales data to remove unpopular, low-margin items or introduce new pizzas that utilize cost-effective, high-availability ingredients, enhancing menu profitability.
+
 
 ## How to Use / Run the Analysis
 
